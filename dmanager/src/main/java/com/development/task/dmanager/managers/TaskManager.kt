@@ -18,7 +18,11 @@ internal class TaskManager {
                 serviceContentTypeDownload.contentServiceObserver.onStart(serviceContentTypeDownload)
             }
 
-            override fun onSuccess(statusCode: Int, headers: Array<Header>, response: ByteArray) {
+            override fun onSuccess(
+                statusCode: Int,
+                headers: Array<out Header>?,
+                response: ByteArray?
+            ) {
                 // called when response HTTP status is "200 OK"
                 serviceContentTypeDownload.data = response
                 serviceContentTypeDownload.contentServiceObserver.onSuccess(serviceContentTypeDownload)
@@ -26,7 +30,12 @@ internal class TaskManager {
                 contentServiceStatusObserver.setDone(serviceContentTypeDownload)
             }
 
-            override fun onFailure(statusCode: Int, headers: Array<Header>, errorResponse: ByteArray, e: Throwable) {
+            override fun onFailure(
+                statusCode: Int,
+                headers: Array<out Header>?,
+                errorResponse: ByteArray?,
+                e: Throwable?
+            ) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                 serviceContentTypeDownload.contentServiceObserver
                     .onFailure(serviceContentTypeDownload, statusCode, errorResponse, e)

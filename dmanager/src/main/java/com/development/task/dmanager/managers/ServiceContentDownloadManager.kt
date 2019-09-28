@@ -13,7 +13,6 @@ import com.loopj.android.http.AsyncHttpClient
 import java.util.HashMap
 import java.util.LinkedList
 
-val downloadManagerProvider by lazy{  ServiceContentDownloadManager.getInstance() }
 
 class ServiceContentDownloadManager private constructor() {
     private val allRequestsByKey = HashMap<String, LinkedList<ServiceContentTypeDownload>>()
@@ -74,7 +73,7 @@ class ServiceContentDownloadManager private constructor() {
 
             override fun onFailure(
                 mDownloadDataType: ServiceContentTypeDownload,
-                statusCode: Int,
+                statusCode: Int?,
                 errorResponse: ByteArray?,
                 e: Throwable?
             ) {

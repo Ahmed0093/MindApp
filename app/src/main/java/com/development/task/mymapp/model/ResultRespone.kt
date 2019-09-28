@@ -1,12 +1,5 @@
 package com.development.task.mymapp.model
-import android.os.Parcel
 import android.os.Parcelable
-import com.development.task.mymapp.model.Categories
-import com.development.task.mymapp.model.Links
-import com.development.task.mymapp.model.Urls
-import com.development.task.mymapp.model.User
-import com.google.gson.annotations.Expose
-import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 /*

@@ -10,7 +10,7 @@ interface ContentServiceObserver {
 
     fun onFailure(
         serviceContentTypeDownload: ServiceContentTypeDownload,
-        statusCode: Int,
+        statusCode: Int?,
         errorResponse: ByteArray?,
         e: Throwable?
     )
