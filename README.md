@@ -2,7 +2,7 @@
 This App follows MVP Architecture with kotlin code base
 
 
-This project is aimed for learning and to get hands dirty with MVP architecture and using a built in library with interation with a sample app
+This project is aimed for learning and to get hands dirty with MVP architecture and using a built in library with interaction with a sample app
 the library is responsible for downloading files and have the caching manager that dont dowload the same url twice if exist in cache.
 
 ## Getting Started
