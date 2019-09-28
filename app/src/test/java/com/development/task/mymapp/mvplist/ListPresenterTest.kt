@@ -38,7 +38,9 @@ class ListPresenterTest {
             internetConnectivityHelper
         )
     }
-
+    /**
+     * Verify [ListPresenter.fetchArticles] triggers when internet connecttion available no interaction with [listView.showErrorMessage] &
+     * */
     @Test
     fun fetchArticles_Success() {
 
@@ -49,7 +51,9 @@ class ListPresenterTest {
 
 
     }
-
+    /**
+     * Verify [ListPresenter.fetchArticles] triggers when no internet connections interaction with [listView.showErrorMessage] &
+     * */
     @Test
     fun fetchArticles() {
         val connectivityManager = mock(ConnectivityManager::class.java)
@@ -64,7 +68,9 @@ class ListPresenterTest {
 
 
     }
-
+    /**
+     * Verify [ListPresenter.onArticleItemCLicked] triggers no interaction with [listView.navigateToDetailsActivity] &
+     * */
     @Test
     fun onArticleItemCLicked() {
         lisPresenter.onArticleItemCLicked(getDummyResultList().get(0))
@@ -92,7 +98,9 @@ class ListPresenterTest {
         results.add(result2)
         return results
     }
-
+    /**
+     * Verify [ListPresenter.onFabIconClicked] triggers no interaction with [listView.showToastCacheCleared] &
+     * */
     @Test
     fun onFabIconClicked() {
         lisPresenter.onFabIconClicked()

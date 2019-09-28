@@ -27,13 +27,7 @@ class DetailsActivity : AppCompatActivity() {
 
         selectedItem = intent.getParcelableExtra(SELECTED_ITEM) as ResultRespone?
         tvTitleDetails.text = selectedItem?.user?.name
-//        tvPriceDetails.text = selectedItem?.price.toString()+"$"
         tvDescription.text = selectedItem?.likes.toString()
-//        glideRequestManager
-//            .load(selectedItem?.image?.link)
-//            .placeholder(R.drawable.ic_mtrl_chip_checked_circle)
-//            .apply(RequestOptions().override(selectedItem?.image?.width?.toInt()!!, selectedItem?.image?.height?.toInt()!!))
-//            .into(ivAvatarDetails)
 
     }
 
